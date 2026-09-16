@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Permanent+Marker&display=swap');
+
+:root {
+  --ink: #17212b;
+  --cream: #fff7e9;
+  --paper: rgba(255, 248, 235, .93);
+  --accent: #e6c86e;
+  --blue: #8fd3ff;
+  --max: 1200px;
+}
+
+* { box-sizing: border-box; scroll-behavior: smooth; }
+html { scroll-padding-top: 76px; }
+body {
+  margin: 0;
+  color: var(--ink);
+  background: #101a25;
+  font-family: "DM Sans", Arial, sans-serif;
+}
+.site-header {
+  position: fixed; inset: 0 0 auto 0; z-index: 1000;
+  height: 76px; padding: 0 5%;
+  display: flex; align-items: center; justify-content: space-between;
+  background: rgba(11, 20, 30, .9);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0,0,0,.18);
+}
+.logo {
+  color: white; text-decoration: none; font: 2rem "Permanent Marker", cursive;
+  letter-spacing: .5px;
+}
+.nav { display: flex; gap: 8px; }
+.nav a {
+  color: white; text-decoration: none; padding: 11px 15px; border-radius: 999px;
+  font-weight: 700; transition: .2s ease;
+}
+.nav a:hover, .nav a.active { background: rgba(255,255,255,.12); color: var(--accent); }
+.menu-toggle { display: none; color: white; background: none; border: 0; font-size: 1.7rem; }
+
+.panel {
+  min-height: 100vh; position: relative; isolation: isolate;
+  background-size: cover; background-position: center;
+  display: grid; place-items: center;
+  overflow: hidden;
+}
+.panel::before {
+  content: ""; position: absolute; inset: 0; z-index: -1;
+  background: linear-gradient(90deg, rgba(0,0,0,.55), rgba(0,0,0,.08));
+}
+.home-panel { background-image: url("assets/home-bg.svg"); }
+.about-panel { background-image: url("assets/about-bg.svg"); }
+.photos-panel { background-image: url("assets/photos-bg.svg"); }
+.hobbies-panel { background-image: url("assets/hobbies-bg.svg"); }
+
+.overlay { width: 100%; min-height: 100vh; display: grid; align-items: center; }
+.hero-copy { max-width: var(--max); width: 90%; margin: 76px auto 0; color: white; }
+.eyebrow, .section-kicker { letter-spacing: .2em; font-weight: 700; font-size: .8rem; }
+h1, h2 { font-family: "Permanent Marker", cursive; margin: 0 0 18px; line-height: 1.05; }
+h1 { font-size: clamp(3.5rem, 8vw, 7rem); }
+h2 { font-size: clamp(2.5rem, 5vw, 4.5rem); }
+.tagline { font-size: clamp(1.3rem, 2.5vw, 2rem); font-weight: 700; }
+.intro { max-width: 570px; font-size: 1.1rem; line-height: 1.8; }
+.primary-btn {
+  display: inline-block; margin-top: 15px; padding: 13px 21px; border-radius: 999px;
+  background: var(--accent); color: var(--ink); text-decoration: none; font-weight: 800;
+  transition: transform .2s ease;
+}
+.primary-btn:hover { transform: translateY(-3px); }
+
+.panel-content { width: min(1100px, 90%); margin-top: 76px; }
+.paper-card {
+  background: var(--paper); border-radius: 28px; padding: clamp(25px, 5vw, 55px);
+  box-shadow: 0 18px 50px rgba(0,0,0,.25);
+  max-width: 760px;
+}
+.paper-card p { font-size: 1.05rem; line-height: 1.8; }
+.dark-card { max-width: 1100px; background: rgba(8, 18, 29, .86); color: white; }
+.traits { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 25px; }
+.traits span { padding: 9px 13px; border: 1px solid rgba(23,33,43,.18); border-radius: 999px; }
+
+.photo-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 25px; }
+.photo-grid figure { margin: 0; transform: rotate(-1deg); transition: transform .2s ease; }
+.photo-grid figure:nth-child(even) { transform: rotate(1.5deg); }
+.photo-grid figure:hover { transform: translateY(-6px) rotate(0); }
+.photo-grid img { width: 100%; aspect-ratio: 4/5; object-fit: cover; border: 8px solid #fff; box-shadow: 0 8px 22px rgba(0,0,0,.25); }
+.photo-grid figcaption { text-align: center; padding: 8px 0; font-weight: 700; }
+.upload-tip { font-size: .9rem !important; opacity: .8; }
+code { background: rgba(255,255,255,.1); padding: 3px 6px; border-radius: 5px; }
+
+.hobbies-panel::before { background: linear-gradient(90deg, rgba(7,14,22,.75), rgba(8,18,20,.15)); }
+.hobbies-panel .paper-card { max-width: 1050px; background: rgba(12,18,25,.84); color: white; border: 1px solid rgba(255,255,255,.15); }
+.hobby-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 25px; }
+.hobby {
+  min-height: 135px; padding: 18px; border-radius: 18px;
+  background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.12);
+  display: flex; flex-direction: column; gap: 7px;
+}
+.hobby span { font-size: 2rem; }
+.hobby b { font-size: .98rem; }
+.hobby small { opacity: .72; line-height: 1.35; }
+.music-line { margin-top: 25px; font-style: italic; }
+
+.back-top {
+  position: absolute; right: 28px; bottom: 28px; width: 64px; height: 64px;
+  border-radius: 50%; border: 2px solid rgba(255,255,255,.75);
+  background: rgba(10,20,30,.78); color: white; cursor: pointer;
+  display: grid; place-items: center; font-size: 1.45rem; transition: .2s ease;
+}
+.back-top small { font-size: .58rem; margin-top: -17px; }
+.back-top:hover { transform: translateY(-4px); background: rgba(10,20,30,.95); }
+
+footer {
+  min-height: 80px; background: #0b1622; color: white;
+  display: flex; justify-content: center; align-items: center; gap: 18px;
+  font-size: .9rem;
+}
+
+@media (max-width: 800px) {
+  .site-header { height: 68px; }
+  .logo { font-size: 1.45rem; }
+  .menu-toggle { display: block; }
+  .nav {
+    display: none; position: absolute; top: 68px; left: 0; right: 0;
+    padding: 12px; flex-direction: column; background: rgba(11,20,30,.97);
+  }
+  .nav.open { display: flex; }
+  .nav a { text-align: center; }
+  .hero-copy { margin-top: 68px; }
+  .photo-grid { grid-template-columns: repeat(2, 1fr); }
+  .hobby-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+  .photo-grid, .hobby-grid { grid-template-columns: 1fr; }
+  .back-top { width: 55px; height: 55px; right: 16px; bottom: 16px; }
+}

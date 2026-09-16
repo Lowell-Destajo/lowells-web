@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lowell's Web - a simple personal website.">
+  <title>Lowell's Web</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a class="logo" href="#home">Lowell's Web</a>
+  <button class="menu-toggle" aria-label="Open navigation">☰</button>
+  <nav class="nav">
+    <a href="#home">Home</a>
+    <a href="#about">About Me</a>
+    <a href="#photos">Photos</a>
+    <a href="#hobbies">Hobbies</a>
+  </nav>
+</header>
+
+<main>
+  <section id="home" class="panel home-panel">
+    <div class="overlay">
+      <div class="hero-copy">
+        <p class="eyebrow">WELCOME TO</p>
+        <h1>Lowell's Web ☀</h1>
+        <p class="tagline">Small steps. Big dreams.</p>
+        <p class="intro">A little corner of the internet where I share some things about myself, my interests, and my favorite moments.</p>
+        <a class="primary-btn" href="#about">Get to know me ↓</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="panel about-panel">
+    <div class="panel-content">
+      <div class="paper-card">
+        <span class="section-kicker">01</span>
+        <h2>About Me ☕</h2>
+        <p>
+          Hi! I'm Lowell. I'm a simple person who enjoys music, learning new things,
+          spending time outdoors, and finding fun in the little things.
+        </p>
+        <p>
+          This website is a small collection of the things I like and the moments
+          I want to remember.
+        </p>
+        <div class="traits">
+          <span>✦ Curious</span>
+          <span>✦ Determined</span>
+          <span>✦ Always growing</span>
+        </div>
+      </div>
+    </div>
+    <button class="back-top" data-top aria-label="Back to top">↑<small>Top</small></button>
+  </section>
+
+  <section id="photos" class="panel photos-panel">
+    <div class="panel-content">
+      <div class="paper-card dark-card">
+        <span class="section-kicker">02</span>
+        <h2>Photos 📷</h2>
+        <p class="photo-note">A few moments and snapshots from my life.</p>
+
+        <div class="photo-grid">
+          <figure><img src="assets/photos/lowell-photo-1.jpg" alt="Lowell portrait"><figcaption>Random Shot #1</figcaption></figure>
+          <figure><img src="assets/photos/lowell-photo-2.jpg" alt="Lowell portrait outdoors"><figcaption>Random shot #2</figcaption></figure>
+          <figure><img src="assets/photos/lowell-photo-3.jpeg" alt="Lowell outdoors at night"><figcaption>Random shot #3</figcaption></figure>
+          <figure><img src="assets/photos/lowell-photo-1.jpg" alt="Lowell portrait"><figcaption>Don't have any good photos left lol</figcaption></figure>
+
+      </div>
+    </div>
+    <button class="back-top" data-top aria-label="Back to top">↑<small>Top</small></button>
+  </section>
+
+  <section id="hobbies" class="panel hobbies-panel">
+    <div class="panel-content">
+      <div class="paper-card">
+        <span class="section-kicker">03</span>
+        <h2>Hobbies 🎵</h2>
+        <p>These are some of the things that keep me happy, focused, and inspired.</p>
+
+        <div class="hobby-grid">
+          <div class="hobby"><span>🎸</span><b>Playing Guitars</b><small>Strings, chords & practice</small></div>
+          <div class="hobby"><span>🎹</span><b>Playing Keys</b><small>Melodies & chords</small></div>
+          <div class="hobby"><span>🎧</span><b>Listening to Music</b><small>Any genre, anytime</small></div>
+          <div class="hobby"><span>🎮</span><b>Computer Games</b><small>Play, explore & unwind</small></div>
+          <div class="hobby"><span>🍳</span><b>Cooking</b><small>Trying things in the kitchen</small></div>
+          <div class="hobby"><span>🥾</span><b>Hiking</b><small>Trails & fresh air</small></div>
+          <div class="hobby"><span>🌿</span><b>Nature-Watching</b><small>Quiet moments outdoors</small></div>
+        </div>
+
+        <p class="music-line">“I love music” — and yes, I listen to almost every genre. 😅</p>
+      </div>
+    </div>
+    <button class="back-top" data-top aria-label="Back to top">↑<small>Top</small></button>
+  </section>
+</main>
+
+<footer>
+  <span>Lowell's Web</span>
+  <span>♡</span>
+  <span id="year"></span>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
