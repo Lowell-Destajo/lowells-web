@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900">
+<defs><linearGradient id="coffee" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#24170f"/><stop offset=".5" stop-color="#70472b"/><stop offset="1" stop-color="#c58b57"/></linearGradient></defs>
+<rect width="1600" height="900" fill="url(#coffee)"/>
+<circle cx="1190" cy="430" r="250" fill="#d6a16b" opacity=".22"/>
+<g transform="translate(980 300)">
+<ellipse cx="170" cy="260" rx="230" ry="65" fill="#4b2e1b" opacity=".7"/>
+<path d="M0 120 Q170 55 340 120 L315 330 Q170 400 25 330Z" fill="#f4eadc"/>
+<ellipse cx="170" cy="120" rx="170" ry="55" fill="#d7c0a4"/>
+<ellipse cx="170" cy="115" rx="145" ry="40" fill="#5c351e"/>
+<path d="M100 112 Q170 75 240 112 Q170 155 100 112Z" fill="#e8c98f" opacity=".9"/>
+<path d="M340 155 Q470 135 465 240 Q455 320 330 285" fill="none" stroke="#f4eadc" stroke-width="45"/>
+</g>
+<g fill="#2d1b11" opacity=".9"><circle cx="1080" cy="610" r="15"/><circle cx="1140" cy="660" r="12"/><circle cx="1210" cy="620" r="17"/><circle cx="1290" cy="680" r="13"/></g>
+<path d="M150 680 Q420 620 680 700" stroke="#f0d4b0" stroke-width="7" opacity=".4" fill="none"/>
+</svg>
